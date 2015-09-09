@@ -1,0 +1,65 @@
+---------------------------------------------------------
+# Create Session with objects
+    - Objects
+        - Vehicle
+        - BMA
+
+### Request ###
+{
+    "objects": {
+        "Rettung Bieberfelde 10.00.00": {"status": "2"},
+        "Bieber 30.01": {"status": "2"},
+        "Land 01.01": {"status": "2"},
+        "Stadt 01.01": {"status": "2"},
+        "BMA 01": {"status": "0"}
+    }
+}
+
+### Response ###
+{
+    "sessionId": "xyc123",
+    "status": "OK"
+    or
+    "status": "FAILURE",
+    "message": "Something went wrong..."
+}
+
+---------------------------------------------------------
+# Update Session objects
+
+### Request ###
+{
+    "sessionId": "xyc123",
+    "objects": {
+        "Rettung Bieberfelde 10.00.00": {"status": "3"},
+        "BMA 01": {"status": "1"}
+    }
+}
+
+### Response ###
+{
+    "sessionId": "xyc123",
+    "status": "OK"
+    or
+    "status": "FAILURE",
+    "message": "Something went wrong..."
+}
+
+---------------------------------------------------------
+# View Session (by sessionId)
+
+### HTML RESPONSE ###
+Just read the session data from database and show it in html
+
+### JSON RESPONSE (requires "password" param on request ###
+{
+    "session": "xyc123",
+    "objects": {
+        "Rettung Bieberfelde 10.00.00": {"status": "2"},
+        "Bieber 30.01": {"status": "2"},
+        "Land 01.01": {"status": "2"},
+        "Stadt 01.01": {"status": "2"},
+        "BMA 01": {"status": "0"}
+    }
+}
+---------------------------------------------------------
