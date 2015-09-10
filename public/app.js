@@ -1,20 +1,27 @@
-(function(angular) {
-    'use strict';
 
-    angular.module('MyApp', [])
-        .controller('MyController', ['$scope', MyController]);
+// setInterval (5 seconds)
+    // ajax get on session
+    // iterate of result list
+    // assign new status value
 
-    function MyController() {
-        //$http.get('/show/924d7516-dba4-4d84-8de1-c819752d4486').
-        //    then(function(response) {
-        //        console.log(response);
-        //    });
-    }
+function updateStatus() {
+    $.ajax({
+        url: '',
+        data: '',
+        dataType: 'json',
+        success: function(data, textStatus, jqXHR) {
+            data.forEach(function(currentValue, index, array) {
+                var vehicle = $('.vehicle-' + currentValue.id);
+                var status = vehicle.find('.status').eq(0);
+                var oldStatus = status.html();
 
-    MyController.prototype.objects = [];
+                if (oldStatus != currentValue.status) {
+                    status.html(currentValue.status);
+                    status.switchClass('status--'+oldStatus, 'status--'+currentValue.status)
+                }
+            });
+        }
+    });
+}
 
-    MyController.prototype.test = function(test) {
-        console.log(test);
-    };
-
-})(window.angular);
+setInterval(updateStatus, 3000);

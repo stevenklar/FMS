@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="MyApp">
+<html>
     <head>
         <title>FMS</title>
 
@@ -65,21 +65,17 @@
             .status--8 { background-color: #0080C0; }
             .status--9 { background-color: #408040; }
         </style>
-
-        <script src="../bower_components/angular/angular.js"></script>
-        <script src="../app.js"></script>
-
     </head>
 
-    <body ng-controller="MyController as fms">
+    <body>
         <?php $first = true; ?>
         @foreach ($categories->get() as $i => $category)
         <div class="department @if($first == true) department--first @endif">
             <div class="department--name">{{ $category['name'] }}</div>
 
             @foreach ($category['objects'] as $object)
-            <div class="vehicle">
-                <div ng-init="MyController.prototype.test('<?= $object['name'] ?>')" ng-model="fms.objects[<?= $object['id'] ?>]" class="status status--<?= $object['status'] ?>"><?= $object['status'] ?></div>
+            <div class="vehicle vehicle-{{ $object['id'] }}">
+                <div class="status status--<?= $object['status'] ?>"><?= $object['status'] ?></div>
 
                 <div class="call-sign">
                     <div class="id">{{ substr(str_replace('.','/',$object['name']), -8) }}</div>
@@ -93,5 +89,9 @@
         <?php $first = false; ?>
         @endforeach
     </body>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="../app.js"></script>
 
 </html>

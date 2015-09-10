@@ -45,7 +45,7 @@ class SessionController extends Controller
         return redirect('/show/' . $session->getId());
     }
 
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $session = $this->sessionManager->read($id);
 
@@ -63,7 +63,11 @@ class SessionController extends Controller
 
         $categories = new \App\Models\CategoryList($session);
 
-        return view('show', compact('categories'));
+        if ($request->isXmlHttpRequest()) {
+            return $session->getObjects();
+        } else {
+            return view('show', compact('categories'));
+        }
     }
 
     public function store(Request $request)
