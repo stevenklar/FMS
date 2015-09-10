@@ -87,10 +87,17 @@
             <div class="vehicle vehicle-{{ $object['id'] }}">
                 <div class="status status--<?= $object['status'] ?>"><?= $object['status'] ?></div>
 
+                @if ($category['name'] != 'BMA')
                 <div class="call-sign">
-                    <div class="id">{{ substr(str_replace('.','/',$object['name']), -8) }}</div>
-                    <div class="name">{{ substr($object['name'], 0, -8) }}</div>
+                    <?php preg_match('/([\w 0-9]+) (.+)/', $object['name'], $matches); ?>
+                    <div class="id">{{ str_replace('.', '/', $matches[2]) }}</div>
+                    <div class="name">{{ $matches[1] }}</div>
                 </div>
+                @else
+                <div class="call-sign">
+                    <div class="id">{{ $object['name'] }}</div>
+                </div>
+                @endif
             </div>
             @endforeach
 
