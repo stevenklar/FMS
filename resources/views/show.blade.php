@@ -63,6 +63,7 @@
                 border-bottom-right-radius: 5px;
             }
 
+            .status { background-color: #666; color: white; }
             .status--0 { background-color: #666; color: white; }
             .status--1 { background-color: #00FF00; color: black; }
             .status--2 { background-color: #007E00; color: white; }
@@ -72,7 +73,7 @@
             .status--6 { background-color: #888888; color: black; }
             .status--7 { background-color: #FF8181; color: black; }
             .status--8 { background-color: #FF80FF; color: black; }
-
+            .status--9 { background-color: #666; color: white; }
         </style>
     </head>
 
