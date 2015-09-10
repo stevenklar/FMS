@@ -9,8 +9,8 @@ class CategoryList
         $categories = [];
 
         foreach ($session->getObjects() as $object) {
-            $categories[$object->category]['name'] = $object->category;
-            $categories[$object->category]['objects'][] = $object;
+            $categories[$object['category']]['name'] = $object['category'];
+            $categories[$object['category']]['objects'][] = $object;
         }
 
         $this->categories = $categories;

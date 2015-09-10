@@ -45,19 +45,6 @@ class GamingSession {
 
     public function getObjects()
     {
-        // fake
-        $fakeObject = new \App\Models\Object();
-        $fakeObject->id = rand(0, 1000000);
-        $fakeObject->name = 'Heros 34.12.01';
-        $fakeObject->status = '2';
-        $fakeObject->category = 'THW Wache 01';
-
-        $fakeObject2 = clone $fakeObject;
-        $fakeObject2->category = 'BF Nord';
-        $fakeObject2->name = 'LF 16 33.42.01';
-
-        return [$fakeObject, $fakeObject, $fakeObject, $fakeObject2];
-
         return $this->objects;
     }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MyApp">
     <head>
         <title>FMS</title>
 
@@ -65,8 +65,13 @@
             .status--8 { background-color: #0080C0; }
             .status--9 { background-color: #408040; }
         </style>
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../app.js"></script>
+
     </head>
-    <body>
+
+    <body ng-controller="MyController as fms">
         <?php $first = true; ?>
         @foreach ($categories->get() as $i => $category)
         <div class="department @if($first == true) department--first @endif">
@@ -74,11 +79,11 @@
 
             @foreach ($category['objects'] as $object)
             <div class="vehicle">
-                <div class="status status--<?= $object->status ?>"><?= $object->status ?></div>
+                <div ng-init="MyController.prototype.test('<?= $object['name'] ?>')" ng-model="fms.objects[<?= $object['id'] ?>]" class="status status--<?= $object['status'] ?>"><?= $object['status'] ?></div>
 
                 <div class="call-sign">
-                    <div class="id">{{ substr(str_replace('.','/',$object->name), -8) }}</div>
-                    <div class="name">{{ substr($object->name, 0, -8) }}</div>
+                    <div class="id">{{ substr(str_replace('.','/',$object['name']), -8) }}</div>
+                    <div class="name">{{ substr($object['name'], 0, -8) }}</div>
                 </div>
             </div>
             @endforeach
@@ -88,4 +93,5 @@
         <?php $first = false; ?>
         @endforeach
     </body>
+
 </html>

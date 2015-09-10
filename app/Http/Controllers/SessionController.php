@@ -84,8 +84,8 @@ class SessionController extends Controller
             }
 
             return [
-                'sessionId' => $session->getId(),
-                'status' => 'OK'
+                'status' => 'OK',
+                'sessionId' => $session->getId()
             ];
         }
 
@@ -98,15 +98,25 @@ class SessionController extends Controller
         return redirect('/show/' . $session->getId());
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        if (!$request->isJson()) {
-            return 'NOK';
+        $sessionId = $request->get('sessionId');
+
+        if (empty($sessionId)) {
+            return [
+                'status' => 'FAILURE',
+                'message' => 'Session not found'
+            ];
         }
 
+        $session = $this->sessionManager->update(
+            $sessionId,
+            $request->get('objects')
+        );
+
         return [
-            'sessionId' => $session->getId(),
-            'status' => 'OK'
+            'status' => 'OK',
+            'sessionId' => $sessionId
         ];
     }
 

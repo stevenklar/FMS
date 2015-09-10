@@ -18,13 +18,21 @@ class SessionManager implements SessionManagerInterface {
             'password' => $password
         ]);
 
-        // TODO: create objects...
-        $objects = [];
+        foreach ($objects['categories'] as $category => $gameObjects) {
+            foreach ($gameObjects as $gameObject) {
+                $object = new \App\Object();
+                $object->name = $gameObject;
+                $object->status = '2';
+                $object->category = $category;
+                $object->session_id = $id;
+                $object->save();
+            }
+        }
 
         return new GamingSession(
             $session->sid,
             $session->name,
-            $objects,
+            [],
             $session->scope,
             $session->password
         );
@@ -38,8 +46,9 @@ class SessionManager implements SessionManagerInterface {
             return null;
         }
 
-        // TODO: fetch objects...
-        $objects = [];
+        $objects = \App\Object::where('session_id', '=', $sessionId)
+            ->get()
+            ->toArray();
 
         return new GamingSession(
             $session->sid,
@@ -53,7 +62,20 @@ class SessionManager implements SessionManagerInterface {
 
     public function update($sessionId, $objects)
     {
-        dd($sessionId);
+        foreach ($objects as $object) {
+            $gameObject = \App\Object::where('session_id', '=', $sessionId)
+                ->where('name', '=', $object['name'])
+                ->first();
+
+            if (is_null($gameObject)) {
+                continue;
+            }
+
+            $gameObject->status = $object['status'];
+            $gameObject->save();
+        }
+
+        return $sessionId;
     }
 
     private function v4()
