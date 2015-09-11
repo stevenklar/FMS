@@ -76,15 +76,59 @@ body {
     border-bottom-right-radius: 5px;
 }
 
-.status { background-color: #666; color: white; }
-.status--0 { background-color: #666; color: white; }
-.status--1 { background-color: #00FF00; color: black; }
-.status--2 { background-color: #007E00; color: white; }
-.status--3 { background-color: #FFFF00; color: black; }
-.status--4 { background-color: #FF0000; color: black; }
-.status--5 { background-color: #55B8FE; color: black; }
-.status--6 { background-color: #888888; color: black; }
-.status--7 { background-color: #FF8181; color: black; }
-.status--8 { background-color: #FF80FF; color: black; }
-.status--9 { background-color: #666; color: white; }
+.status--0 { background-color: rgb(10,59,118); color: white; }
+.status--1 { background-color: rgb(126,243,126); color: black; }
+.status--2 { background-color: rgb(83,195,118); color: white; }
+.status--3 { background-color: rgb(240,173,95); color: black; }
+.status--4 { background-color: rgb(163,52,14); color: black; }
+.status--5 { background-color: rgb(100,175,239); color: black; }
+.status--6 { background-color: rgb(171,171,171); color: black; }
+.status--7 { background-color: rgb(238,159,209); color: black; }
+.status--8 { background-color: rgb(159,98,235); color: black; }
+.status--9 { background-color: rgb(89,9,115); color: white; }
+.status-10 { background-color: rgb(217,0,0); color: white; }
 
+.bma.status--0 {
+    background-color: rgb(235,235,235);
+}
+.bma.status--1 {
+    background-color: rgb(217,0,0);
+}
+
+.column {
+    float: left;
+    width: 50%;
+    min-width: 100px;
+    min-height: 100px;
+}
+.full-column {
+    float: left;
+    width: 100%;
+}
+.full-column .department--name {
+    width: 100%;
+}
+.full-column--top {
+    min-height: 0px;
+}
+.portlet {
+    float: left;
+    margin-bottom: 1em;
+    width: 100%;
+}
+.portlet-header {
+    position: relative;
+}
+.portlet-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.portlet-content {
+    padding: 0.4em;
+}
+.portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 100px;
+}
