@@ -14,9 +14,11 @@ class CreateObjectsTable extends Migration
             $table->string('category');
 
             $table->integer('session_id')->unsigned();
-            $table->foreign('session_id')->references('id')->on('sessions');
-
             $table->timestamps();
+        });
+
+        Schema::table('objects', function($table) {
+            $table->foreign('session_id')->references('id')->on('sessions');
         });
     }
 
