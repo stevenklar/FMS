@@ -32,3 +32,8 @@ function updateStatus() {
 }
 
 setInterval(updateStatus, 2000);
+
+// hide full department when click on department
+$('.department--name').click(function() {
+    $(this).parent().hide();
+});
