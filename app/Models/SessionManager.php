@@ -18,11 +18,12 @@ class SessionManager implements SessionManagerInterface {
             'password' => $password
         ]);
 
-        foreach ($objects['categories'] as $category => $gameObjects) {
+        foreach ($objects as $category => $gameObjects) {
             foreach ($gameObjects as $gameObject) {
                 $object = new \App\Object();
-                $object->name = $gameObject;
-                $object->status = '2';
+                $object->log = $gameObject['log'];
+                $object->name = $gameObject['display'];
+                $object->status = $gameObject['state'];
                 $object->category = $category;
                 $object->session_id = $id;
                 $object->save();

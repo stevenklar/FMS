@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    background-color: #FFF;
+}
+
+.container {
+}
+
+.left-side {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.right-side {
+    width: 50%;
+    float: right;
+    height: 100%;
+}
+
+.center-side {
+    float: left;
+    width: 100%;
+}
+
+.department {
+    margin-bottom: 1.5rem;
+}
+
+.department--first {
+    margin-top: 0;
+}
+
+.department--name {
+    font-family: "Lato";
+    background-color: #DDD;
+    width: 96%;
+    height: 1rem;
+    font-size: 1.25rem;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    margin: 0;
+    padding: 0.0rem 0rem 0.5rem 1rem;
+}
+
+.vehicle {
+    font-family: "Lato";
+    font-weight: 300;
+    font-style: "normal";
+    width: 12rem;
+    height: 1rem;
+    margin: 7px;
+    padding-bottom: 1rem;
+    float: left;
+}
+
+.id {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.status {
+    color: #FFF;
+    float: left;
+    margin-right: 10px;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    font-family: "Lato";
+    font-weight: bold;
+    border: 1px solid black;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.status { background-color: #666; color: white; }
+.status--0 { background-color: #666; color: white; }
+.status--1 { background-color: #00FF00; color: black; }
+.status--2 { background-color: #007E00; color: white; }
+.status--3 { background-color: #FFFF00; color: black; }
+.status--4 { background-color: #FF0000; color: black; }
+.status--5 { background-color: #55B8FE; color: black; }
+.status--6 { background-color: #888888; color: black; }
+.status--7 { background-color: #FF8181; color: black; }
+.status--8 { background-color: #FF80FF; color: black; }
+.status--9 { background-color: #666; color: white; }
+

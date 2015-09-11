@@ -1,9 +1,4 @@
 
-// setInterval (5 seconds)
-    // ajax get on session
-    // iterate of result list
-    // assign new status value
-
 function updateStatus() {
     $.ajax({
         url: '',
@@ -24,4 +19,4 @@ function updateStatus() {
     });
 }
 
-setInterval(updateStatus, 3000);
+setInterval(updateStatus, 2000);
