@@ -36,7 +36,7 @@ if ($length >= 4) {
     @endforeach
 </div>
 
-<div class="column">
+<div class="column right-column">
     @foreach ($rightDepartments as $category)
         @include('partials/show/department', ['category' => (object) $category])
     @endforeach

@@ -46,6 +46,7 @@ $(function() {
         cancel: ".portlet-toggle",
         placeholder: "portlet-placeholder ui-corner-all",
         dropOnEmpty: true,
+        tolerance: "pointer",
         forceHelperSize: true
     });
 

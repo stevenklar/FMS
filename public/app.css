@@ -109,7 +109,10 @@ body {
     width: 100%;
 }
 .full-column--top {
-    min-height: 0px;
+    min-height: 5px;
+}
+.right-column .department--name {
+    width: 100%;
 }
 .portlet {
     float: left;
