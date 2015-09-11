@@ -65,7 +65,7 @@ class SessionManager implements SessionManagerInterface {
     {
         foreach ($objects as $object) {
             $gameObject = \App\Object::where('session_id', '=', $sessionId)
-                ->where('name', '=', $object['name'])
+                ->where('log', '=', $object['name'])
                 ->first();
 
             if (is_null($gameObject)) {

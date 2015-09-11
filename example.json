@@ -1,0 +1,115 @@
+{
+    "name": "Test New",
+    "scope": "public",
+    "password": "",
+    "objects": {
+        "Feuerwehr - Hauptwache 1": [
+            {"log": "Florian Bieberfelde 01.11.01", "display": "FW 1 ELW1 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.46.01", "display": "FW 1 HLF20 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.33.01", "display": "FW 1 DLK23 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.46.02", "display": "FW 1 HLF20 2", "state": "6" },
+            {"log": "Florian Bieberfelde 01.24.01", "display": "FW 1 TLF4000 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.65.01", "display": "FW 1 WLF 26 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.65.02", "display": "FW 1 WLF 26 2", "state": "6" },
+            {"log": "Florian Bieberfelde 01.82.01", "display": "FW 1 NEF 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.83.01", "display": "FW 1 RTW 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.83.02", "display": "FW 1 Z-RTW 2", "state": "6" },
+            {"log": "Florian Bieberfelde 01.83.03", "display": "FW 1 RTW 3", "state": "6" }
+        ],
+        "Feuerwehr - Nordwache 2": [
+            {"log": "Florian Bieberfelde 02.11.01", "display": "FW 2 ELW1 1", "state": "6" },
+            {"log": "Florian Bieberfelde 02.46.01", "display": "FW 2 HLF20 1", "state": "6" },
+            {"log": "Florian Bieberfelde 02.33.01", "display": "FW 2 DLK23 1", "state": "6" },
+            {"log": "Florian Bieberfelde 02.52.01", "display": "FW 2 RW 1", "state": "6" },
+            {"log": "Florian Bieberfelde 02.72.01", "display": "FW 2 LRF 1", "state": "6" },
+            {"log": "Florian Bieberfelde 02.83.01", "display": "FW 2 RTW 1", "state": "6" }
+        ],
+        "Feuerwehr - Freiwillige Feuerwehr - 3 / 4": [
+            {"log": "Florian Bieberfelde 03.44.01", "display": "FW 3 LF20 1", "state": "6" },
+            {"log": "Florian Bieberfelde 03.45.01", "display": "FW 3 LF16 TS 1", "state": "6" },
+            {"log": "Florian Bieberfelde 03.24.01", "display": "FW 3 TLF4000 1", "state": "6" },
+            {"log": "Florian Bieberfelde 03.91.01", "display": "FW 3 DekonP 1", "state": "6" },
+            {"log": "Florian Bieberfelde 04.42.01", "display": "FW 4 LF10 1", "state": "6" },
+            {"log": "Florian Bieberfelde 04.92.01", "display": "FW 4 ABCERK 1", "state": "6" }
+        ],
+        "Feuerwehr - Freiwillige Feuerwehr - 5": [
+            {"log": "Florian Bieberfelde 05.19.01", "display": "FW 5 MTF 1", "state": "6" },
+            {"log": "Florian Bieberfelde 05.24.01", "display": "FW 5 TLF4000 1", "state": "6" },
+            {"log": "Florian Bieberfelde 05.44.01", "display": "FW 5 HLF20 1", "state": "6" },
+            {"log": "Florian Bieberfelde 05.63.01", "display": "FW 5 SW 2000 1", "state": "6" }
+        ],
+        "Feuerwehr - Freiwillige Feuerwehr - 6": [
+            {"log": "Florian Bieberfelde 06.10.01", "display": "FW 6 KDOW 1", "state": "6" },
+            {"log": "Florian Bieberfelde 06.23.01", "display": "FW 6 LF20 1", "state": "6" },
+            {"log": "Florian Bieberfelde 06.46.01", "display": "FW 6 HLF20 1", "state": "6" },
+            {"log": "Florian Bieberfelde 06.58.01", "display": "FW 6 GW-L1 1", "state": "6" }
+        ],
+        "Rettungsdienst - Krankenhaus": [
+            {"log": "Rettung Bieberfelde 11.82.01", "display": "RD 1 NEF 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 11.83.01", "display": "RD 1 RTW 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 11.85.01", "display": "RD 1 KTW 1", "state": "6" }
+        ],
+        "Rettungsdienst - Rettungswache": [
+            {"log": "Rettung Bieberfelde 12.82.01", "display": "RD 2 NEF 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 12.83.01", "display": "RD 2 RTW 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 12.83.02", "display": "RD 2 RTW 2", "state": "6" }
+        ],
+        "Rettungsdienst - Ausserhalb": [
+            {"log": "Rettung Bieberfelde 13.80.01", "display": "RD 0 LNA 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 13.82.01", "display": "RD 3 NEF 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 13.83.01", "display": "RD 3 RTW 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 13.83.02", "display": "RD 3 RTW 2", "state": "6" },
+            {"log": "Rettung Bieberfelde 13.85.01", "display": "RD 3 KTW 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 14.81.01", "display": "RD 4 ITW 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 15.82.01", "display": "RD 5 NEF 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 15.83.01", "display": "RD 5 RTW 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 15.83.02", "display": "RD 5 RTW 2", "state": "6" },
+            {"log": "Rettung Bieberfelde 15.19.01", "display": "RD 5 MTF 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 15.85.01", "display": "RD 5 NKTW 1", "state": "6" },
+            {"log": "Rettung Bieberfelde 15.85.02", "display": "RD 5 NKTW 2", "state": "6" },
+            {"log": "Rettung Bieberfelde 15.89.01", "display": "RD 5 GW-SAN 1", "state": "6" },
+            {"log": "Florian Bieberfelde 01.84.01", "display": "RD CHR 31", "state": "6" }
+        ],
+        "Polizei": [
+            {"log": "Bieber 10.01", "display": "POL 1 STW 1", "state": "6" },
+            {"log": "Bieber 10.02", "display": "POL 1 STW 2", "state": "6" },
+            {"log": "Bieber 10.03", "display": "POL 1 STW 3", "state": "6" },
+            {"log": "Bieber 10.09", "display": "POL 1 STW 4", "state": "6" },
+            {"log": "Bieber 10.04", "display": "POL 1 MTW 1", "state": "6" },
+            {"log": "Bieber 10.05", "display": "POL 1 MTW 2", "state": "6" },
+            {"log": "Bieber 10.06", "display": "POL 1 KRAD 1", "state": "6" },
+            {"log": "Bieber 10.07", "display": "POL 1 GRUKW 1", "state": "6" },
+            {"log": "Bieber 10.08", "display": "POL 1 GRUKW 2", "state": "6" },
+            {"log": "Bieber 20.01", "display": "POL 2 STW 1", "state": "6" },
+            {"log": "Bieber 20.02", "display": "POL 2 MTW 1", "state": "6" },
+            {"log": "Bieber 20.03", "display": "POL 2 KRAD 1", "state": "6" },
+            {"log": "Bieber 30.02", "display": "BEPO GRUKW 1", "state": "6" },
+            {"log": "Bieber 30.03", "display": "BEPO GRUKW 2", "state": "6" },
+            {"log": "Bieber 30.01", "display": "BEPO GEFKW", "state": "6" },
+            {"log": "Bieber 30.06", "display": "BEPO SW4", "state": "6" },
+            {"log": "Bieber 30.04", "display": "BEPO WAWE4000", "state": "6" },
+            {"log": "KRD_01_1", "display": "POL 0 KRD 1", "state": "6" }
+        ],
+        "BMA": [
+            {"log": "BMA Krankenhaus", "display": "BMA Krankenhaus", "state": "0" },
+            {"log": "BMA HBF", "display": "BMA Hauptbahnhof", "state": "0" },
+            {"log": "BMA PitStop", "display": "BMA PitStop", "state": "0" },
+            {"log": "BMA BieChem", "display": "BMA BieChem", "state": "0" },
+            {"log": "BMA BurgerKing", "display": "BMA BurgerKing", "state": "0" },
+            {"log": "BMA Cinemaxx", "display": "BMA Cinemaxx", "state": "0" },
+            {"log": "BMA Grundschule", "display": "BMA Grundschule", "state": "0" },
+            {"log": "BMA HFuR1", "display": "BMA Wache 1", "state": "0" },
+            {"log": "BMA Hotel Mitte", "display": "BMA Hotel Stadtmitte", "state": "0" },
+            {"log": "BMA Hotel Wald", "display": "BMA Hotel am Wald", "state": "0" },
+            {"log": "BMA Post", "display": "BMA DHL-Logistikzentrum", "state": "0" },
+            {"log": "BMA Rathaus", "display": "BMA Rathaus", "state": "0" },
+            {"log": "BMA Tiefgarage Kolkmann", "display": "BMA Tiefgarage 'Kolkmann'", "state": "0" },
+            {"log": "BMA Bank", "display": "BMA Bank", "state": "0" },
+            {"log": "BMA Electronic House", "display": "BMA Electronic House", "state": "0" },
+            {"log": "BMA Grande Shopping", "display": "BMA Grande Shopping", "state": "0" },
+            {"log": "BMA Maier Farben", "display": "BMA Maier Farben", "state": "0" },
+            {"log": "BMA Schneider Verwaltung", "display": "BMA Schneider Verwaltung", "state": "0" }
+        ]
+    }
+}
+
