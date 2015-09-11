@@ -49,8 +49,19 @@
         }
         ?>
 
-        <div class="object-log" style="width: 100%">
+        <div class="column full-column">
+            <div class="portlet">
+                <div class="portlet-header">
+                    <div class="department--name">Funkverkehr</div>
+                </div>
+
+                <div class="portlet-content">
+                    <div class="object-log" style="width: 100%">
+                    </div>
+                </div>
+            </div>
         </div>
+        
     </body>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
