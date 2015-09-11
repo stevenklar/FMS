@@ -135,3 +135,15 @@ body {
     margin: 0 1em 1em 0;
     height: 100px;
 }
+
+.object-log {
+    width: 100%;
+    float: left;
+}
+
+.status-update {
+    float: left;
+    padding: .2rem 1rem .2rem 1rem;
+    font-family: "Lato";
+    width: 22rem;
+}

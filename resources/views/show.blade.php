@@ -8,47 +8,50 @@
     </head>
 
     <body>
-<?php
-$categories = $categories->get();
-$length = count($categories);
+        <?php
+        $categories = $categories->get();
+        $length = count($categories);
 
-$departments = array_slice($categories, 0);
+        $departments = array_slice($categories, 0);
 
-if ($length >= 4) {
-    $firstDepartment = array_shift($categories);
-    $lastDepartment = array_pop($categories);
+        if ($length >= 4) {
+            $firstDepartment = array_shift($categories);
+            $lastDepartment = array_pop($categories);
 
-    $remaining = $length - 2;
+            $remaining = $length - 2;
 
-    $oneRowCount = $remaining / 2;
+            $oneRowCount = $remaining / 2;
 
-    $leftDepartments = array_slice($categories, 0, $oneRowCount+1);
-    $rightDepartments = array_slice($categories, $oneRowCount+1);
-?>
+            $leftDepartments = array_slice($categories, 0, $oneRowCount+1);
+            $rightDepartments = array_slice($categories, $oneRowCount+1);
+        ?>
 
-<div class="column full-column full-column--top">
-    @include('partials/show/department', ['category' => (object) $firstDepartment])
-</div>
+        <div class="column full-column full-column--top">
+            @include('partials/show/department', ['category' => (object) $firstDepartment])
+        </div>
 
-<div class="column">
-    @foreach ($leftDepartments as $category)
-        @include('partials/show/department', ['category' => (object) $category])
-    @endforeach
-</div>
+        <div class="column">
+            @foreach ($leftDepartments as $category)
+                @include('partials/show/department', ['category' => (object) $category])
+            @endforeach
+        </div>
 
-<div class="column right-column">
-    @foreach ($rightDepartments as $category)
-        @include('partials/show/department', ['category' => (object) $category])
-    @endforeach
-</div>
+        <div class="column right-column">
+            @foreach ($rightDepartments as $category)
+                @include('partials/show/department', ['category' => (object) $category])
+            @endforeach
+        </div>
 
-<div class="column full-column">
-    @include('partials/show/department', ['category' => (object) $lastDepartment])
-</div>
-<?php
-}
-?>
+        <div class="column full-column">
+            @include('partials/show/department', ['category' => (object) $lastDepartment])
+        </div>
+        <?php
+        }
+        ?>
 
+        <div class="object-log" style="width: 100%">
+        </div>
+    </body>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>

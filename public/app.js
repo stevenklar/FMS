@@ -24,6 +24,25 @@ function updateStatus() {
                         // vehicle
                         status.html(currentValue.status);
                         status.switchClass('status--'+oldStatus, 'status--'+currentValue.status);
+
+                        var statusText = new Array();
+                        statusText["0"] = " löst den Notruf aus";
+                        statusText["1"] = " einsatzbereit über Funk";
+                        statusText["2"] = " einsatzbereit auf Wache";
+                        statusText["3"] = " hat Einsatz übernommen";
+                        statusText["4"] = " ist EST an";
+                        statusText["5"] = " hat Sprechwunsch";
+                        statusText["6"] = " nicht einsatzbereit";
+                        statusText["7"] = " Patient aufgenommen";
+                        statusText["8"] = " Transportziel erreicht";
+                        statusText["9"] = " Notarzt aufgenommen/Streife";
+
+                        var vehicleName = vehicle.find('.call-sign').text().trim();
+                        $('.object-log').prepend(
+                            '<div class="status-update status--'+ currentValue.status +'">' +
+                            vehicleName + ' -' + statusText[currentValue.status] +
+                            '</div>'
+                        );
                     }
                 }
             });
