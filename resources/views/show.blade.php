@@ -15,7 +15,7 @@ $count = $length / 4;
 
 $departments = [];
 $departments[] = array_slice($categories, 0, 5);
-$departments[] = array_slice($categories, 6, 3);
+$departments[] = array_slice($categories, 5, 4);
 $departments[] = array_slice($categories, 9);
 ?>
         <div class="container">
