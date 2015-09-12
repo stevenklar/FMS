@@ -85,6 +85,17 @@ class SessionManager implements SessionManagerInterface {
                 continue;
             }
 
+            // there is no status 0 - its a C!
+            if ($object['status'] == '0') {
+                $object['status'] = 'C';
+            }
+
+            // status 9 means patrol for police which
+            // means free on radio
+            if ($object['status'] == '9') {
+                $object['status'] = '1';
+            }
+
             $gameObject->status = $object['status'];
             $gameObject->save();
         }

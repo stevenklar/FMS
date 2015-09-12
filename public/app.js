@@ -26,21 +26,23 @@ function updateStatus() {
                         status.switchClass('status--'+oldStatus, 'status--'+currentValue.status);
 
                         var statusText = new Array();
-                        statusText["0"] = " löst den Notruf aus";
+                        statusText["0"] = " wurde zum Einsatz alarmiert";
+                        statusText["C"] = " wurde zum Einsatz alarmiert";
+
                         statusText["1"] = " einsatzbereit über Funk";
                         statusText["2"] = " einsatzbereit auf Wache";
                         statusText["3"] = " hat Einsatz übernommen";
-                        statusText["4"] = " ist EST an";
+                        statusText["4"] = " Wir sind Einsatzstelle an!";
                         statusText["5"] = " hat Sprechwunsch";
-                        statusText["6"] = " nicht einsatzbereit";
-                        statusText["7"] = " Patient aufgenommen";
-                        statusText["8"] = " Transportziel erreicht";
-                        statusText["9"] = " Notarzt aufgenommen/Streife";
+                        statusText["6"] = " ist nicht einsatzbereit";
+                        statusText["7"] = " hat Patient aufgenommen";
+                        statusText["8"] = " haben Transportziel erreicht";
+                        statusText["9"] = " beginnt nun Streifenfahrt";
 
                         var vehicleName = vehicle.find('.call-sign').text().trim();
                         $('.object-log').prepend(
                             '<div class="status-update status--'+ currentValue.status +'">' +
-                            vehicleName + ' -' + statusText[currentValue.status] +
+                            vehicleName + ' ' + statusText[currentValue.status] +
                             '</div>'
                         );
                     }
