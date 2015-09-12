@@ -10,6 +10,7 @@ class SessionManager implements SessionManagerInterface {
     public function create($name, $objects, $scope, $password = '')
     {
         $uniqueIdFound = false;
+        $id = 'wrong';
 
         while(!$uniqueIdFound) {
             $id = $this->v4();
