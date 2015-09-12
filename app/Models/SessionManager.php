@@ -14,7 +14,7 @@ class SessionManager implements SessionManagerInterface {
         while(!$uniqueIdFound) {
             $id = $this->v4();
 
-            $findSession = Session::where('session_id', '=', $id)
+            $findSession = Session::where('sid', '=', $id)
                 ->get()
                 ->count();
 
