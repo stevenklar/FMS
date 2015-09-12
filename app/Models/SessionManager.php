@@ -9,7 +9,19 @@ class SessionManager implements SessionManagerInterface {
 
     public function create($name, $objects, $scope, $password = '')
     {
-        $id = $this->v4();
+        $uniqueIdFound = false;
+
+        while(!$uniqueIdFound) {
+            $id = $this->v4();
+
+            $findSession = Session::where('session_id', '=', $id)
+                ->get()
+                ->count();
+
+            if ($findSession == 0) {
+                $uniqueIdFound = true;
+            }
+        }
 
         $session = Session::create([
             'sid' => $id,
@@ -81,12 +93,10 @@ class SessionManager implements SessionManagerInterface {
 
     private function v4()
     {
-        return sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
-            mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+        return sprintf('%04x%04x%04x',
             mt_rand(0, 0xffff),
-            mt_rand(0, 0x0fff) | 0x4000,
-            mt_rand(0, 0x3fff) | 0x8000,
-            mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff)
         );
     }
 
