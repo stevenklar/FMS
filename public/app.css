@@ -87,7 +87,8 @@ body {
 .status--7 { background-color: rgb(238,159,209); color: black; }
 .status--8 { background-color: rgb(159,98,235); color: black; }
 .status--9 { background-color: rgb(89,9,115); color: white; }
-.status-10 { background-color: rgb(217,0,0); color: white; }
+.status--10 { background-color: rgb(217,0,0); color: white; }
+.status--C { background-color: rgb(240,173,95); color: black; }
 
 .bma.status--0 {
     background-color: rgb(235,235,235);
@@ -145,7 +146,7 @@ body {
 
 .status-update {
     float: left;
-    padding: .2rem 1rem .2rem 1rem;
+    padding: .3rem 1rem .3rem 1rem;
     font-family: "Lato";
     width: 100%;
 }
