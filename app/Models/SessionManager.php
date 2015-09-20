@@ -86,7 +86,7 @@ class SessionManager implements SessionManagerInterface {
             }
 
             // there is no status 0 - its a C!
-            if ($object['status'] == '0') {
+            if ($object['status'] == '0' && !starts_with($object['name'], 'BMA')) {
                 $object['status'] = 'C';
             }
 
