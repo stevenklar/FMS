@@ -4,7 +4,7 @@
         <title>FMS</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:300normal" rel="stylesheet" type="text/css">
-        <link href="../app.css" rel="stylesheet" type="text/css">
+        <link href="{{ $session->getStyle() }}" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        
+
     </body>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

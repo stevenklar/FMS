@@ -96,6 +96,8 @@ body {
 .bma.status--1 {
     background-color: rgb(217,0,0);
 }
+.krankenhaus.status { background-color: rgb(171,171,171); color: black; }
+.krankenhaus.status.status--0 { background-color: rgb(217,0,0); }
 
 .column {
     float: left;

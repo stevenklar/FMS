@@ -9,6 +9,7 @@ class Object {
     public $status;
     public $category;
     public $session;
+    public $log;
 
 }
 

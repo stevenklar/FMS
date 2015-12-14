@@ -12,16 +12,18 @@ class GamingSession {
     private $objects = [];
     private $scope = self::SCOPE_PUBLIC;
     private $password;
+    private $style;
 
     private $locked = false;
 
-    public function __construct($sessionId, $name, $objects, $scope, $password = '')
+    public function __construct($sessionId, $name, $objects, $scope, $password = '', $style)
     {
         $this->id = $sessionId;
         $this->name = $name;
         $this->objects = $objects;
         $this->scope = $scope;
         $this->password = $password;
+        $this->style = $style;
 
         if ($scope == self::SCOPE_PRIVATE) {
             $this->locked = true;
@@ -46,6 +48,11 @@ class GamingSession {
     public function getObjects()
     {
         return $this->objects;
+    }
+
+    public function getStyle()
+    {
+        return $this->style;
     }
 
     public function unlock($password)

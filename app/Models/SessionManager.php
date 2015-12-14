@@ -7,7 +7,7 @@ use App\Models\GamingSession;
 
 class SessionManager implements SessionManagerInterface {
 
-    public function create($name, $objects, $scope, $password = '')
+    public function create($name, $objects, $scope, $password = '', $style = '/app.css')
     {
         $uniqueIdFound = false;
         $id = 'wrong';
@@ -28,7 +28,8 @@ class SessionManager implements SessionManagerInterface {
             'sid' => $id,
             'name' => $name,
             'scope' => $scope,
-            'password' => $password
+            'password' => $password,
+            'style' => $style
         ]);
 
         foreach ($objects as $category => $gameObjects) {
@@ -48,7 +49,8 @@ class SessionManager implements SessionManagerInterface {
             $session->name,
             [],
             $session->scope,
-            $session->password
+            $session->password,
+            $session->style
         );
     }
 
@@ -69,7 +71,8 @@ class SessionManager implements SessionManagerInterface {
             $session->name,
             $objects,
             $session->scope,
-            $session->password
+            $session->password,
+            $session->style
         );
 
     }

@@ -1,5 +1,5 @@
 <div class="vehicle vehicle-{{ $object->id }}">
-    <div class="status status--<?= $object->status ?>">
+    <div class="krankenhaus status status--<?= $object->status ?>">
         <?= $object->status ?>
     </div>
 

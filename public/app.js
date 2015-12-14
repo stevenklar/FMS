@@ -19,7 +19,9 @@ function updateStatus() {
                         if (vehicle.find('.status').hasClass('status--1') && currentValue.status != 1) {
                             status.switchClass('status--1', 'status--0');
                         }
-
+                    } else if (currentValue.category.indexOf("Bettenbelegung") > -1) {
+                        // krankenhausbelegung
+                        status.html(currentValue.status);
                     } else {
                         // vehicle
                         status.html(currentValue.status);

@@ -7,6 +7,8 @@
             @foreach ($category->objects as $object)
                 @if ($category->name == 'BMA')
                     @include('partials/show/bma', ['object' => (object) $object])
+                @elseif(starts_with($object['log'], 'BB'))
+                    @include('partials/show/krankenhaus', ['object' => (object) $object])
                 @else
                     @include('partials/show/vehicle', ['object' => (object) $object])
                 @endif

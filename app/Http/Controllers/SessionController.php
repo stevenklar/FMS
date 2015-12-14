@@ -66,7 +66,7 @@ class SessionController extends Controller
         if ($request->isXmlHttpRequest()) {
             return $session->getObjects();
         } else {
-            return view('show', compact('categories'));
+            return view('show', compact('categories', 'session'));
         }
     }
 
@@ -76,8 +76,9 @@ class SessionController extends Controller
         $objects = $request->get('objects');
         $scope = $request->get('scope', 'public');
         $password = $request->get('password', '');
+        $style = $request->get('style', '/app.css');
 
-        $session = $this->sessionManager->create($name, $objects, $scope, $password);
+        $session = $this->sessionManager->create($name, $objects, $scope, $password, $style);
 
         if ($request->isJson()) {
             if (is_null($session)) {
