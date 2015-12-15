@@ -4,7 +4,11 @@
         <title>FMS</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:300normal" rel="stylesheet" type="text/css">
+        @if($session->getStyle() != '')
         <link href="{{ $session->getStyle() }}" rel="stylesheet" type="text/css">
+        @else
+        <link href="/app.css" rel="stylesheet" type="text/css">
+        @endif
     </head>
 
     <body>
