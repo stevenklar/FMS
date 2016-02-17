@@ -99,6 +99,10 @@ class SessionManager implements SessionManagerInterface {
                 $object['status'] = '1';
             }
 
+            $client = new \phpcent\Client( env('CENT_HOST') );
+            $client->setSecret( env('CENT_SECRET') );
+            $client->publish( $sessionId, [ 'payload' => $object, 'id' => $gameObject->id ] );
+
             $gameObject->status = $object['status'];
             $gameObject->save();
         }
