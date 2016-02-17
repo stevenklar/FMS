@@ -63,10 +63,17 @@ class SessionController extends Controller
 
         $categories = new \App\Models\CategoryList($session);
 
+        $token = array();
+        $token['timestamp'] = time();
+
+        $client = new \phpcent\Client( env('CENT_HOST') );
+        $client->setSecret( env('CENT_SECRET') );
+        $token['hash'] = $client->generateClientToken('', $token['timestamp']);
+
         if ($request->isXmlHttpRequest()) {
             return $session->getObjects();
         } else {
-            return view('show', compact('categories', 'session'));
+            return view('show', compact('categories', 'session', 'token'));
         }
     }
 

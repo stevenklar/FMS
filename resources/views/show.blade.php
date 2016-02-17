@@ -70,6 +70,24 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="../app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/sockjs/1.0/sockjs.min.js" type="text/javascript"></script>
+    <script src="/centrifuge.min.js" type="text/javascript"></script>
+    <script src="/app.js"></script>
+    <script type="text/javascript">
 
+        var centrifuge = new Centrifuge({
+            url: '{{ env('CENT_HOST') }}/connection',
+            user: "",
+            timestamp: "{{ $token['timestamp'] }}",
+            token: "{{ $token['hash'] }}"
+        });
+
+        centrifuge.subscribe("{{ $session->getId() }}", function(message) {
+            updateStatus(message.data.payload, message.data.id);
+        });
+
+        centrifuge.connect();
+
+    </script>
 </html>
