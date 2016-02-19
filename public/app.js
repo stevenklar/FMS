@@ -8,10 +8,10 @@ function updateStatus(currentValue, id) {
         if (currentValue.name.indexOf("BMA") > -1) {
             // bma
             if (vehicle.find('.status').hasClass('status--0') && currentValue.status != 0) {
-                status.removeClass('status--'+oldStatus).addClass('status--'+currentValue.status);
+                status.removeClass('status--0').addClass('status--1');
             }
             if (vehicle.find('.status').hasClass('status--1') && currentValue.status != 1) {
-                status.removeClass('status--'+oldStatus).addClass('status--'+currentValue.status);
+                status.removeClass('status--1').addClass('status--0');
             }
         } else if (currentValue.name.indexOf("BB") > -1) {
             // krankenhausbelegung
